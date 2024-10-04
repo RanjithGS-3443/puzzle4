@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Puzzle Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Number Puzzle Solver</h1>
+        <marquee scrollamount="10"><b>Welcome to *Number Puzzle Solver*😜😜, Best platform to find solution for your problem 🫡🫡.</b></marquee>
+    </header>
+   
+    <div>
+        <br>
+        <label for="gridSize"><b>Select grid size:</b></label>
+        <select id="gridSize" onchange="createPuzzle()">
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+            <option value="4">4x4</option>
+            <option value="5">5x5</option>
+            <option value="6">6x6</option>
+            <option value="7">7x7</option>
+            <option value="8">8x8</option>
+            <option value="9">9x9</option>
+            <option value="10">10x10</option>
+        </select>
+    </div>
+
+    <!-- Add this above the puzzle grid for user input -->
+    <div>
+        <button onclick="createInputPuzzle()">Create Input Puzzle</button>
+        <button onclick="collectUserInputs()">Submit Puzzle</button>
+    </div>
+
+    <div id="puzzleGrid" class="puzzle-grid"></div>
+
+    <button id="shuffle" onclick="shufflePuzzle()">Shuffle Puzzle</button>
+    <button id="solve" onclick="solvePuzzle()">Solve Puzzle</button>
+
+    <p><u>**********************************</u></p>
+
+    <!-- Moves List Section -->
+    <div class="container">
+        <h2>Moves Followed:</h2>
+        <div id="movesList" style="margin-top: 20px;">
+            <ul id="moves"></ul> <!-- This is where moves will be displayed -->
+        </div>
+
+        <h2>Solution Steps:</h2>
+        <!-- Solution Matrix Section -->
+        <div id="solutionContainer" style="margin-top: 20px;">
+            <!-- This container will display the solution matrices -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
